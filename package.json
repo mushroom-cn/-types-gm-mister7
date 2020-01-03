@@ -1,0 +1,20 @@
+{
+  "name": "gm-mister7-types",
+  "version": "1.0.0",
+  "description": "@types for gm-mister7",
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mushroom-cn/gm-mister7-types.git"
+  },
+  "keywords": [],
+  "author": "youngmushroom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mushroom-cn/gm-mister7-types/issues"
+  },
+  "homepage": "https://github.com/mushroom-cn/gm-mister7-types#readme"
+}
