@@ -130,6 +130,6 @@ declare global {
 	| end: global structure
 	|--------------------------------------------------
 	*/
-
+	const DEBUG: boolean;
 }
 export default global;
