@@ -87,3 +87,4 @@ interface Cart extends Version {
 interface Order extends Version {
 
 }
+const DEBUG: boolean;
