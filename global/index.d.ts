@@ -1,7 +1,6 @@
-import { Component } from "react";
 import { i18n } from "i18next";
-import { Route } from "router5";
 import { Reducer } from "redux";
+import { Route } from "router5";
 
 declare global {
 	/**
@@ -39,6 +38,7 @@ declare global {
 		getRoutes(): Route[];
 		getResourceBundles(): { ns: string; lng: string; resource: Dictionary<string>; }[];
 		getMainComponent(): PromiseLike<React.Component<any, any>>;
+		module: any;
 	}
 	interface IApp {
 		start: (id: string) => void;
@@ -59,7 +59,7 @@ declare global {
 		onLoadPlugin: (callback: () => IPlugin) => void;
 		uninstallPlugin: (pluginId: string) => void;
 		clearStore: () => void;
-		useDispatch: () => Dispatch;
+		dispatch: (action: { type: string, [key: string]: any; }) => void;
 		t: (key, {
 			ns: string,
 		}) => string;
