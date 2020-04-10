@@ -54,7 +54,7 @@ declare global {
 		new();
 	}
 	interface App {
-		onLoadPlugin: (callback: () => IPlugin) => void;
+		installPlugin: (callback: () => IPlugin) => void;
 		uninstallPlugin: (pluginId: string) => void;
 		clearStore?: () => void;
 		dispatch?: (action: { type: string, [key: string]: any; }) => void;
