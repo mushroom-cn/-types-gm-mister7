@@ -50,19 +50,21 @@ declare global {
 	| end: UI interface
 	|--------------------------------------------------
 	*/
-	declare class AppReadyEvent extends Event {
+	class AppReadyEvent extends Event {
 		new();
 	}
-
-	interface Window {
-		__REDUX_DEVTOOLS_EXTENSION__: any;
+	interface App {
 		onLoadPlugin: (callback: () => IPlugin) => void;
 		uninstallPlugin: (pluginId: string) => void;
-		clearStore: () => void;
-		dispatch: (action: { type: string, [key: string]: any; }) => void;
-		t: (key, {
+		clearStore?: () => void;
+		dispatch?: (action: { type: string, [key: string]: any; }) => void;
+		t?: (key, {
 			ns: string,
 		}) => string;
+	}
+	interface Window {
+		__REDUX_DEVTOOLS_EXTENSION__: any;
+		app: App;
 	}
 	/**
 	|--------------------------------------------------
@@ -70,7 +72,7 @@ declare global {
 	|--------------------------------------------------
 	*/
 	interface Dictionary<T> {
-		[key: string | number]: T;
+		[key: string]: T;
 	}
 	type Dispatch = (action: { type: string, [key: string]: any; }) => void;
 	type Tran = (key: string, ...args) => string;
