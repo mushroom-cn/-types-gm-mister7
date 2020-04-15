@@ -14,5 +14,5 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    npm publish
+    npm publish --tag=beta
   displayName: 'Run a multi-line script'
