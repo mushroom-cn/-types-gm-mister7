@@ -14,5 +14,6 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    npm config set //registry.npmjs.org/:_authToken ${NPM_AUTH_TOKEN}
     npm publish --tag=beta
   displayName: 'Run a multi-line script'
