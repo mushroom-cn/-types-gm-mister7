@@ -9,7 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+       
     strategy:
       matrix:
         node-version: [12.x]
